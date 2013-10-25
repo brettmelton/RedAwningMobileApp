@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>734940B3-017E-490F-BE9F-E63BBCE9D1AA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RedAwning</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8CEBE1C9-F87E-4C4C-AA61-ACFB78554BC9</key>
+		<string>https://github.com/erica/iOS-6-Cookbook</string>
+		<key>CE3CB24C-15E1-4BFE-A585-5F2FAF0CA7CA</key>
+		<string>https://github.com/brettmelton/RedAwningMobileApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RedAwning.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8CEBE1C9-F87E-4C4C-AA61-ACFB78554BC9</key>
+		<string>../../../iOS-6-Cookbook</string>
+		<key>CE3CB24C-15E1-4BFE-A585-5F2FAF0CA7CA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/brettmelton/RedAwningMobileApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CE3CB24C-15E1-4BFE-A585-5F2FAF0CA7CA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8CEBE1C9-F87E-4C4C-AA61-ACFB78554BC9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-6-Cookbook</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CE3CB24C-15E1-4BFE-A585-5F2FAF0CA7CA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RedAwning</string>
+		</dict>
+	</array>
+</dict>
+</plist>

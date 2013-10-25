@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Brett Melton. All rights reserved.
 //
 
+// This View manages the Search Controller
+
 #import "SearchViewController.h"
 
 @interface SearchViewController ()
