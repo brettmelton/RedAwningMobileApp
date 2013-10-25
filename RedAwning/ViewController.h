@@ -10,4 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) NSString *photoFileName;
+@property (strong, nonatomic) IBOutlet UITextField *searchTextField;
+
 @end

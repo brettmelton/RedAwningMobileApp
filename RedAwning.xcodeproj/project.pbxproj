@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C5341E01817922E005D5681 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5341DF1817922E005D5681 /* SettingsViewController.m */; };
+		2C66CF46181A2728003A80D3 /* eiffel-tower-paris-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66CF43181A2728003A80D3 /* eiffel-tower-paris-2.png */; };
+		2C66CF47181A2728003A80D3 /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66CF44181A2728003A80D3 /* Gear.png */; };
+		2C66CF48181A2728003A80D3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66CF45181A2728003A80D3 /* logo.png */; };
+		2C66CF4B181A2A8D003A80D3 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66CF4A181A2A8D003A80D3 /* SearchViewController.m */; };
+		2C66CF4E181A2B86003A80D3 /* BrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66CF4D181A2B86003A80D3 /* BrowseViewController.m */; };
+		2C92E8CB1818DC530063BF60 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C92E8C81818DC530063BF60 /* TreeNode.m */; };
+		2C92E8CC1818DC530063BF60 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C92E8CA1818DC530063BF60 /* XMLParser.m */; };
 		2CE91F7818162B9B0067C575 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE91F7718162B9B0067C575 /* Foundation.framework */; };
 		2CE91F7A18162B9B0067C575 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE91F7918162B9B0067C575 /* CoreGraphics.framework */; };
 		2CE91F7C18162B9B0067C575 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE91F7B18162B9B0067C575 /* UIKit.framework */; };
@@ -34,6 +42,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C5341DE1817922E005D5681 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		2C5341DF1817922E005D5681 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2C66CF43181A2728003A80D3 /* eiffel-tower-paris-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "eiffel-tower-paris-2.png"; path = "../../Desktop/Red Awning/eiffel-tower-paris-2.png"; sourceTree = "<group>"; };
+		2C66CF44181A2728003A80D3 /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gear.png; path = "../../Desktop/Red Awning/Gear.png"; sourceTree = "<group>"; };
+		2C66CF45181A2728003A80D3 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../../Desktop/Red Awning/logo.png"; sourceTree = "<group>"; };
+		2C66CF49181A2A8D003A80D3 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = ../SearchViewController.h; sourceTree = "<group>"; };
+		2C66CF4A181A2A8D003A80D3 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = ../SearchViewController.m; sourceTree = "<group>"; };
+		2C66CF4C181A2B86003A80D3 /* BrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseViewController.h; sourceTree = "<group>"; };
+		2C66CF4D181A2B86003A80D3 /* BrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseViewController.m; sourceTree = "<group>"; };
+		2C92E8C71818DC530063BF60 /* TreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeNode.h; path = "../../iOS-6-Cookbook/C13 Network/05 - XML/XML/TreeNode.h"; sourceTree = "<group>"; };
+		2C92E8C81818DC530063BF60 /* TreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TreeNode.m; path = "../../iOS-6-Cookbook/C13 Network/05 - XML/XML/TreeNode.m"; sourceTree = "<group>"; };
+		2C92E8C91818DC530063BF60 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLParser.h; path = "../../iOS-6-Cookbook/C13 Network/05 - XML/XML/XMLParser.h"; sourceTree = "<group>"; };
+		2C92E8CA1818DC530063BF60 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLParser.m; path = "../../iOS-6-Cookbook/C13 Network/05 - XML/XML/XMLParser.m"; sourceTree = "<group>"; };
 		2CE91F7418162B9B0067C575 /* RedAwning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedAwning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE91F7718162B9B0067C575 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CE91F7918162B9B0067C575 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +103,9 @@
 		2CE91F6B18162B9A0067C575 = {
 			isa = PBXGroup;
 			children = (
+				2C66CF43181A2728003A80D3 /* eiffel-tower-paris-2.png */,
+				2C66CF44181A2728003A80D3 /* Gear.png */,
+				2C66CF45181A2728003A80D3 /* logo.png */,
 				2CE91F7D18162B9B0067C575 /* RedAwning */,
 				2CE91F9C18162B9B0067C575 /* RedAwningTests */,
 				2CE91F7618162B9B0067C575 /* Frameworks */,
@@ -112,9 +136,19 @@
 		2CE91F7D18162B9B0067C575 /* RedAwning */ = {
 			isa = PBXGroup;
 			children = (
+				2C66CF49181A2A8D003A80D3 /* SearchViewController.h */,
+				2C66CF4A181A2A8D003A80D3 /* SearchViewController.m */,
+				2C92E8C71818DC530063BF60 /* TreeNode.h */,
+				2C92E8C81818DC530063BF60 /* TreeNode.m */,
+				2C92E8C91818DC530063BF60 /* XMLParser.h */,
+				2C92E8CA1818DC530063BF60 /* XMLParser.m */,
 				2CE91F8618162B9B0067C575 /* AppDelegate.h */,
 				2CE91F8718162B9B0067C575 /* AppDelegate.m */,
 				2CE91F8918162B9B0067C575 /* Main.storyboard */,
+				2C66CF4C181A2B86003A80D3 /* BrowseViewController.h */,
+				2C66CF4D181A2B86003A80D3 /* BrowseViewController.m */,
+				2C5341DE1817922E005D5681 /* SettingsViewController.h */,
+				2C5341DF1817922E005D5681 /* SettingsViewController.m */,
 				2CE91F8C18162B9B0067C575 /* ViewController.h */,
 				2CE91F8D18162B9B0067C575 /* ViewController.m */,
 				2CE91F8F18162B9B0067C575 /* Images.xcassets */,
@@ -228,6 +262,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C66CF46181A2728003A80D3 /* eiffel-tower-paris-2.png in Resources */,
+				2C66CF48181A2728003A80D3 /* logo.png in Resources */,
+				2C66CF47181A2728003A80D3 /* Gear.png in Resources */,
 				2CE91F9018162B9B0067C575 /* Images.xcassets in Resources */,
 				2CE91F8218162B9B0067C575 /* InfoPlist.strings in Resources */,
 				2CE91F8B18162B9B0067C575 /* Main.storyboard in Resources */,
@@ -249,9 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C92E8CB1818DC530063BF60 /* TreeNode.m in Sources */,
 				2CE91F8E18162B9B0067C575 /* ViewController.m in Sources */,
+				2C66CF4E181A2B86003A80D3 /* BrowseViewController.m in Sources */,
 				2CE91F8818162B9B0067C575 /* AppDelegate.m in Sources */,
 				2CE91F8418162B9B0067C575 /* main.m in Sources */,
+				2C92E8CC1818DC530063BF60 /* XMLParser.m in Sources */,
+				2C5341E01817922E005D5681 /* SettingsViewController.m in Sources */,
+				2C66CF4B181A2A8D003A80D3 /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +502,7 @@
 				2CE91FA818162B9B0067C575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CE91FA918162B9B0067C575 /* Build configuration list for PBXNativeTarget "RedAwningTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +511,7 @@
 				2CE91FAB18162B9B0067C575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
