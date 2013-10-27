@@ -14,6 +14,8 @@
 		<string>https://github.com/erica/iOS-6-Cookbook</string>
 		<key>CE3CB24C-15E1-4BFE-A585-5F2FAF0CA7CA</key>
 		<string>https://github.com/brettmelton/RedAwningMobileApp.git</string>
+		<key>CE87772C-AE6F-4DC3-966C-F2FC1569A0D2</key>
+		<string>https://github.com/nicklockwood/XMLDictionary</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>RedAwning.xcodeproj/project.xcworkspace</string>
@@ -23,6 +25,8 @@
 		<string>../../../iOS-6-Cookbook</string>
 		<key>CE3CB24C-15E1-4BFE-A585-5F2FAF0CA7CA</key>
 		<string>../..</string>
+		<key>CE87772C-AE6F-4DC3-966C-F2FC1569A0D2</key>
+		<string>../../../XMLDictionary</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/brettmelton/RedAwningMobileApp.git</string>
@@ -47,6 +51,14 @@
 			<string>CE3CB24C-15E1-4BFE-A585-5F2FAF0CA7CA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>RedAwning</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CE87772C-AE6F-4DC3-966C-F2FC1569A0D2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>XMLDictionary</string>
 		</dict>
 	</array>
 </dict>

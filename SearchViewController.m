@@ -9,6 +9,8 @@
 // This View manages the Search Controller
 
 #import "SearchViewController.h"
+#import "SearchModelController.h"
+#import "ViewController.h"
 
 @interface SearchViewController ()
 
@@ -29,6 +31,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    SearchModelController *model = [[SearchModelController alloc] init];
+    
+    NSString *strSearchText = [ViewController getCurrentSearchValue];
+
+    
+    [model performSearch:strSearchText];
+
 }
 
 - (void)didReceiveMemoryWarning

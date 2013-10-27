@@ -13,4 +13,6 @@
 @property (strong, nonatomic) NSString *photoFileName;
 @property (strong, nonatomic) IBOutlet UITextField *searchTextField;
 
++ (NSString*)getCurrentSearchValue;
+
 @end

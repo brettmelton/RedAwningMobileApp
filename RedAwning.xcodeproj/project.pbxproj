@@ -13,8 +13,9 @@
 		2C66CF48181A2728003A80D3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66CF45181A2728003A80D3 /* logo.png */; };
 		2C66CF4B181A2A8D003A80D3 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66CF4A181A2A8D003A80D3 /* SearchViewController.m */; };
 		2C66CF4E181A2B86003A80D3 /* BrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66CF4D181A2B86003A80D3 /* BrowseViewController.m */; };
-		2C92E8CB1818DC530063BF60 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C92E8C81818DC530063BF60 /* TreeNode.m */; };
-		2C92E8CC1818DC530063BF60 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C92E8CA1818DC530063BF60 /* XMLParser.m */; };
+		2CB643B1181B4D8C00224248 /* SearchModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB643B0181B4D8C00224248 /* SearchModelController.m */; };
+		2CB643B4181B54D900224248 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB643B3181B54D900224248 /* ModelController.m */; };
+		2CB643B7181B626C00224248 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB643B6181B626C00224248 /* XMLDictionary.m */; };
 		2CE91F7818162B9B0067C575 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE91F7718162B9B0067C575 /* Foundation.framework */; };
 		2CE91F7A18162B9B0067C575 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE91F7918162B9B0067C575 /* CoreGraphics.framework */; };
 		2CE91F7C18162B9B0067C575 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE91F7B18162B9B0067C575 /* UIKit.framework */; };
@@ -51,10 +52,12 @@
 		2C66CF4A181A2A8D003A80D3 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = ../SearchViewController.m; sourceTree = "<group>"; };
 		2C66CF4C181A2B86003A80D3 /* BrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseViewController.h; sourceTree = "<group>"; };
 		2C66CF4D181A2B86003A80D3 /* BrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseViewController.m; sourceTree = "<group>"; };
-		2C92E8C71818DC530063BF60 /* TreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeNode.h; path = "../../iOS-6-Cookbook/C13 Network/05 - XML/XML/TreeNode.h"; sourceTree = "<group>"; };
-		2C92E8C81818DC530063BF60 /* TreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TreeNode.m; path = "../../iOS-6-Cookbook/C13 Network/05 - XML/XML/TreeNode.m"; sourceTree = "<group>"; };
-		2C92E8C91818DC530063BF60 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLParser.h; path = "../../iOS-6-Cookbook/C13 Network/05 - XML/XML/XMLParser.h"; sourceTree = "<group>"; };
-		2C92E8CA1818DC530063BF60 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLParser.m; path = "../../iOS-6-Cookbook/C13 Network/05 - XML/XML/XMLParser.m"; sourceTree = "<group>"; };
+		2CB643AF181B4D8C00224248 /* SearchModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModelController.h; sourceTree = "<group>"; };
+		2CB643B0181B4D8C00224248 /* SearchModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModelController.m; sourceTree = "<group>"; };
+		2CB643B2181B54D900224248 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
+		2CB643B3181B54D900224248 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
+		2CB643B5181B626C00224248 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLDictionary.h; path = ../../XMLDictionary/XMLDictionary/XMLDictionary.h; sourceTree = "<group>"; };
+		2CB643B6181B626C00224248 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLDictionary.m; path = ../../XMLDictionary/XMLDictionary/XMLDictionary.m; sourceTree = "<group>"; };
 		2CE91F7418162B9B0067C575 /* RedAwning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedAwning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE91F7718162B9B0067C575 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CE91F7918162B9B0067C575 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,12 +139,14 @@
 		2CE91F7D18162B9B0067C575 /* RedAwning */ = {
 			isa = PBXGroup;
 			children = (
+				2CB643B5181B626C00224248 /* XMLDictionary.h */,
+				2CB643B6181B626C00224248 /* XMLDictionary.m */,
 				2C66CF49181A2A8D003A80D3 /* SearchViewController.h */,
 				2C66CF4A181A2A8D003A80D3 /* SearchViewController.m */,
-				2C92E8C71818DC530063BF60 /* TreeNode.h */,
-				2C92E8C81818DC530063BF60 /* TreeNode.m */,
-				2C92E8C91818DC530063BF60 /* XMLParser.h */,
-				2C92E8CA1818DC530063BF60 /* XMLParser.m */,
+				2CB643AF181B4D8C00224248 /* SearchModelController.h */,
+				2CB643B0181B4D8C00224248 /* SearchModelController.m */,
+				2CB643B2181B54D900224248 /* ModelController.h */,
+				2CB643B3181B54D900224248 /* ModelController.m */,
 				2CE91F8618162B9B0067C575 /* AppDelegate.h */,
 				2CE91F8718162B9B0067C575 /* AppDelegate.m */,
 				2CE91F8918162B9B0067C575 /* Main.storyboard */,
@@ -286,14 +291,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C92E8CB1818DC530063BF60 /* TreeNode.m in Sources */,
 				2CE91F8E18162B9B0067C575 /* ViewController.m in Sources */,
 				2C66CF4E181A2B86003A80D3 /* BrowseViewController.m in Sources */,
 				2CE91F8818162B9B0067C575 /* AppDelegate.m in Sources */,
 				2CE91F8418162B9B0067C575 /* main.m in Sources */,
-				2C92E8CC1818DC530063BF60 /* XMLParser.m in Sources */,
 				2C5341E01817922E005D5681 /* SettingsViewController.m in Sources */,
+				2CB643B7181B626C00224248 /* XMLDictionary.m in Sources */,
+				2CB643B4181B54D900224248 /* ModelController.m in Sources */,
 				2C66CF4B181A2A8D003A80D3 /* SearchViewController.m in Sources */,
+				2CB643B1181B4D8C00224248 /* SearchModelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,13 +11,29 @@
 @interface ViewController ()
 
 @end
+static NSString* s_currentSearchValue = nil;
+
 
 @implementation ViewController
+
+
++ (NSString*)getCurrentSearchValue
+{
+    return s_currentSearchValue;
+}
+
+- (IBAction)didSearch:(id)sender
+{    
+    s_currentSearchValue = [self searchTextField].text;
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    s_currentSearchValue = [self searchTextField].text;
 }
 
 - (void)didReceiveMemoryWarning
@@ -28,6 +44,9 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.searchTextField resignFirstResponder];
+    
+    s_currentSearchValue = [self searchTextField].text;
+
 }
 
 @end
