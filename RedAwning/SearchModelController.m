@@ -8,6 +8,7 @@
 
 #import "SearchModelController.h"
 #import "XMLDictionary.h"
+#import "Location.h"
 
 
 @implementation SearchModelController
@@ -16,11 +17,10 @@
 {
     
     NSMutableArray *arrLocations = [[NSMutableArray alloc] init];
-
-    /** Solr REST API documentation                     **/
-    /* http://wiki.apache.org/solr/CommonQueryParameters */
-    /**                                                 **/
     
+    /************** Solr REST API documentation **********/
+    /* http://wiki.apache.org/solr/CommonQueryParameters */
+    /*****************************************************/
     NSString *strSolrSearchHttpUrl = @"http://solr-loadbalancer-566393618.us-west-1.elb.amazonaws.com:8080/solr/collection1/select?wt=xml&indent=true&rows=3&q=";
     
     NSMutableString *searchURL = [[NSMutableString alloc] initWithString:strSolrSearchHttpUrl];
@@ -37,6 +37,8 @@
         NSArray *doc = [result objectForKey:@"doc"];
         for (NSDictionary *aDoc in doc)
         {
+            Location *location = [[Location alloc] init];
+            
             if ([[aDoc objectForKey:@"str"] isKindOfClass:[NSArray class]])
             {
                 NSArray *str = [aDoc objectForKey:@"str"];
@@ -44,13 +46,31 @@
                 {
                     NSString *theName = [aStr objectForKey:@"_name"];
                     NSString *theValue = [aStr objectForKey:@"__text"];
-
-                    NSLog(@"hi");
-
+                    
+                    // TODO -bdm- Add to Location Object
+                    NSLog(@"Name=%@ and Value=%@", theName, theValue);
+                    
+                    [location addParameter:theName :theValue];
                 }
 
             }
+            if ([[aDoc objectForKey:@"long"] isKindOfClass:[NSArray class]])
+            {
+                NSArray *longs = [aDoc objectForKey:@"long"];
+                for (NSDictionary *aLong in longs)
+                {
+                    
+                    NSString *theName = [aLong objectForKey:@"_name"];
+                    NSString *theValue = [aLong objectForKey:@"__text"];
+                    
+                    // TODO -bdm- Add to Location Object
+                    NSLog(@"Name=%@ and Value=%@", theName, theValue);
 
+                    [location addParameter:theName :theValue];
+                }
+            }
+
+            [arrLocations addObject:location];
         }
     }
     return arrLocations;
