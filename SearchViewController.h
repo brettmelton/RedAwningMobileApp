@@ -24,5 +24,4 @@
 @property int curIdxLocation;
 @property int curPageNumber;
 
-
 @end

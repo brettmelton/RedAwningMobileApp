@@ -10,5 +10,7 @@
 
 @interface SettingsViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *accountName;
+@property (strong, nonatomic) IBOutlet UIButton *save;
 
 @end

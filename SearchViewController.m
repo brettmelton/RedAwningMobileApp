@@ -27,21 +27,13 @@
     return self;
 }
 
-- (void)swipeLeft {
-    
+- (IBAction)swipeLeft:(UIPanGestureRecognizer *)recognizer
+{
 	NSLog(@"Left!");
 
     if( _curIdxLocation < _arrLocations.count )
     {
-        Location *location = [_arrLocations objectAtIndex:_curIdxLocation];
-        self.entityId.text = location.entityId;
-
-        NSURL *urlPhoto = [NSURL URLWithString:location.imageUrl];
-        NSData *photoData = [NSData dataWithContentsOfURL:urlPhoto];
-        UIImage *img = [[UIImage alloc] initWithData:photoData];
-        [self.entityImg setImage:img];
-    
-        _curIdxLocation++;
+        [self updateView];
     }
     else
     {
@@ -50,8 +42,14 @@
     }
 }
 
-- (void)swipeRight {
+- (void)swipeRight:(UIPanGestureRecognizer *)recognizer
+{
 	NSLog(@"Right!");
+    
+    
+// TODO - Need to implement
+    
+    
 }
 
 - (void)viewDidLoad
@@ -62,12 +60,12 @@
     _curPageNumber = 0;
     _strSearchText = [ViewController getCurrentSearchValue];
 
-	// Set up the swipe recogniser
-	UISwipeGestureRecognizer *leftSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft)];
+	// Set up the swipe recognizer
+	UISwipeGestureRecognizer *leftSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
 	leftSwiper.direction = UISwipeGestureRecognizerDirectionLeft;
 	[self.view addGestureRecognizer:leftSwiper];
     
-	UISwipeGestureRecognizer *rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRight)];
+	UISwipeGestureRecognizer *rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRight:)];
 	rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
 	[self.view addGestureRecognizer:rightSwiper];
     
@@ -81,32 +79,26 @@
     
     if( _arrLocations.count > 0 )
     {
-        Location *location = [_arrLocations objectAtIndex:_curIdxLocation];
-        self.entityId.text = location.entityId;
-
-        NSURL *urlPhoto = [NSURL URLWithString:location.imageUrl];
-        NSData *photoData = [NSData dataWithContentsOfURL:urlPhoto];
-        UIImage *img = [[UIImage alloc] initWithData:photoData];
-        [self.entityImg setImage:img];
-        
-        _curIdxLocation++;
+        [self updateView];
    }
     else
     {
         self.entityId.text = @"No Results";
     }
-    
-    
-    // TODO - need to make the view scrollable and set the entity with each scroll
-    //    for( Location *location in _arrLocations )
-    //    {
-    //        self.entityId.text = location.entityId;
-    //    }
-    
-    
-
 }
 
+- (void)updateView
+{
+    Location *location = [_arrLocations objectAtIndex:_curIdxLocation];
+    self.entityId.text = location.entityId;
+    
+    NSURL *urlPhoto = [NSURL URLWithString:location.imageUrl];
+    NSData *photoData = [NSData dataWithContentsOfURL:urlPhoto];
+    UIImage *img = [[UIImage alloc] initWithData:photoData];
+    [self.entityImg setImage:img];
+    
+    _curIdxLocation++;
+}
 
 - (void)didReceiveMemoryWarning
 {
