@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C02BCE418304B890058ED1B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C02BCE318304B890058ED1B /* SearchViewController.m */; };
 		2C1AD2B6181DF3B900D5E892 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1AD2B5181DF3B900D5E892 /* Location.m */; };
 		2C5341E01817922E005D5681 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5341DF1817922E005D5681 /* SettingsViewController.m */; };
 		2C66CF46181A2728003A80D3 /* eiffel-tower-paris-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66CF43181A2728003A80D3 /* eiffel-tower-paris-2.png */; };
 		2C66CF47181A2728003A80D3 /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66CF44181A2728003A80D3 /* Gear.png */; };
 		2C66CF48181A2728003A80D3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66CF45181A2728003A80D3 /* logo.png */; };
-		2C66CF4B181A2A8D003A80D3 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66CF4A181A2A8D003A80D3 /* SearchViewController.m */; };
 		2C66CF4E181A2B86003A80D3 /* BrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66CF4D181A2B86003A80D3 /* BrowseViewController.m */; };
 		2CB643B1181B4D8C00224248 /* SearchModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB643B0181B4D8C00224248 /* SearchModelController.m */; };
 		2CB643B4181B54D900224248 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB643B3181B54D900224248 /* ModelController.m */; };
@@ -44,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C02BCE218304B890058ED1B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		2C02BCE318304B890058ED1B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		2C1AD2B4181DF3B900D5E892 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		2C1AD2B5181DF3B900D5E892 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		2C5341DE1817922E005D5681 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -51,8 +53,6 @@
 		2C66CF43181A2728003A80D3 /* eiffel-tower-paris-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "eiffel-tower-paris-2.png"; path = "../../Desktop/Red Awning/eiffel-tower-paris-2.png"; sourceTree = "<group>"; };
 		2C66CF44181A2728003A80D3 /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gear.png; path = "../../Desktop/Red Awning/Gear.png"; sourceTree = "<group>"; };
 		2C66CF45181A2728003A80D3 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../../Desktop/Red Awning/logo.png"; sourceTree = "<group>"; };
-		2C66CF49181A2A8D003A80D3 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = ../SearchViewController.h; sourceTree = "<group>"; };
-		2C66CF4A181A2A8D003A80D3 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = ../SearchViewController.m; sourceTree = "<group>"; };
 		2C66CF4C181A2B86003A80D3 /* BrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseViewController.h; sourceTree = "<group>"; };
 		2C66CF4D181A2B86003A80D3 /* BrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseViewController.m; sourceTree = "<group>"; };
 		2CB643AF181B4D8C00224248 /* SearchModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModelController.h; sourceTree = "<group>"; };
@@ -142,10 +142,10 @@
 		2CE91F7D18162B9B0067C575 /* RedAwning */ = {
 			isa = PBXGroup;
 			children = (
+				2C02BCE218304B890058ED1B /* SearchViewController.h */,
+				2C02BCE318304B890058ED1B /* SearchViewController.m */,
 				2CB643B5181B626C00224248 /* XMLDictionary.h */,
 				2CB643B6181B626C00224248 /* XMLDictionary.m */,
-				2C66CF49181A2A8D003A80D3 /* SearchViewController.h */,
-				2C66CF4A181A2A8D003A80D3 /* SearchViewController.m */,
 				2CB643AF181B4D8C00224248 /* SearchModelController.h */,
 				2CB643B0181B4D8C00224248 /* SearchModelController.m */,
 				2C1AD2B4181DF3B900D5E892 /* Location.h */,
@@ -304,7 +304,7 @@
 				2CB643B7181B626C00224248 /* XMLDictionary.m in Sources */,
 				2C1AD2B6181DF3B900D5E892 /* Location.m in Sources */,
 				2CB643B4181B54D900224248 /* ModelController.m in Sources */,
-				2C66CF4B181A2A8D003A80D3 /* SearchViewController.m in Sources */,
+				2C02BCE418304B890058ED1B /* SearchViewController.m in Sources */,
 				2CB643B1181B4D8C00224248 /* SearchModelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
