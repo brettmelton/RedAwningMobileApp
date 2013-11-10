@@ -11,10 +11,13 @@
 @interface Location : NSObject
 
 @property (strong, nonatomic) NSString *entityId;
+@property (strong, nonatomic) NSString *teaser;
+@property (strong, nonatomic) NSString *imageUrl;
 
 @property (nonatomic) float latitude;
 @property (nonatomic) float longitude;
 
 - (void) addParameter:(NSString *) name : (NSString *) value;
 
+- (void) setImageUrlWithModification:(NSString *)imageUrl;
 @end

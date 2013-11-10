@@ -13,66 +13,67 @@
 
 @implementation SearchModelController
 
-- (NSArray*) performSearch:(NSString*) searchTerm
+- (NSArray*) performSearch:(NSString*) searchTerm :(int) iStart
 {
+    int iItemsPerSearch = 5;                   // Hard coding search row return value for short term - make this dynamically driven.
+    iStart *= iItemsPerSearch;
     
     NSMutableArray *arrLocations = [[NSMutableArray alloc] init];
     
     /************** Solr REST API documentation **********/
     /* http://wiki.apache.org/solr/CommonQueryParameters */
     /*****************************************************/
-    NSString *strSolrSearchHttpUrl = @"http://solr-loadbalancer-566393618.us-west-1.elb.amazonaws.com:8080/solr/collection1/select?wt=xml&indent=true&rows=3&q=";
     
-    NSMutableString *searchURL = [[NSMutableString alloc] initWithString:strSolrSearchHttpUrl];
+    NSMutableString *searchURL = [[NSMutableString alloc] initWithString:s_urlSolrSearch];
+    [searchURL appendString:s_urlSolrSearchRowCnt];
+    [searchURL appendString:[NSString stringWithFormat:@"%d",iItemsPerSearch]];
+    [searchURL appendString:s_urlSolrSearchStart];
+    [searchURL appendString:[NSString stringWithFormat:@"%d",iStart]];
+    [searchURL appendString:s_urlSolrSearchQuery];
     [searchURL appendString:searchTerm];
+    
     NSURL *url = [NSURL URLWithString:searchURL];
     NSData *data = [NSData dataWithContentsOfURL:url];
 
-
     NSDictionary *xmlDictionary = [[XMLDictionaryParser alloc] dictionaryWithData:data];
 
-    NSDictionary *result = [xmlDictionary objectForKey:@"result"];
-    if ([[result objectForKey:@"doc"] isKindOfClass:[NSArray class]])
+    NSDictionary *result = [xmlDictionary objectForKey:s_xmlResultNodeName];
+    if ([[result objectForKey:s_xmlDocNodeName] isKindOfClass:[NSArray class]])
     {
-        NSArray *doc = [result objectForKey:@"doc"];
+        NSArray *doc = [result objectForKey:s_xmlDocNodeName];
         for (NSDictionary *aDoc in doc)
         {
-            Location *location = [[Location alloc] init];
-            
-            if ([[aDoc objectForKey:@"str"] isKindOfClass:[NSArray class]])
-            {
-                NSArray *str = [aDoc objectForKey:@"str"];
-                for (NSDictionary *aStr in str)
-                {
-                    NSString *theName = [aStr objectForKey:@"_name"];
-                    NSString *theValue = [aStr objectForKey:@"__text"];
-                    
-                    // TODO -bdm- Add to Location Object
-                    NSLog(@"Name=%@ and Value=%@", theName, theValue);
-                    
-                    [location addParameter:theName :theValue];
-                }
-
-            }
-            if ([[aDoc objectForKey:@"long"] isKindOfClass:[NSArray class]])
-            {
-                NSArray *longs = [aDoc objectForKey:@"long"];
-                for (NSDictionary *aLong in longs)
-                {
-                    
-                    NSString *theName = [aLong objectForKey:@"_name"];
-                    NSString *theValue = [aLong objectForKey:@"__text"];
-                    
-                    // TODO -bdm- Add to Location Object
-                    NSLog(@"Name=%@ and Value=%@", theName, theValue);
-
-                    [location addParameter:theName :theValue];
-                }
-            }
-
+            NSArray *arrNodeNames = [[NSArray alloc] initWithObjects:s_xmlStrNodeName, s_xmlLongNodeName, nil];
+            Location *location = [self addLocationValues:aDoc :arrNodeNames];
             [arrLocations addObject:location];
         }
     }
     return arrLocations;
 }
+
+
+- (Location *) addLocationValues:(NSDictionary *) aDoc :(NSArray*) arrNodeNames
+{
+    Location *location = [[Location alloc] init];
+
+    for (NSString *xmlNodeName in arrNodeNames)
+    {
+        if ([[aDoc objectForKey:xmlNodeName] isKindOfClass:[NSArray class]])
+        {
+            NSArray *nodes = [aDoc objectForKey:xmlNodeName];
+            for (NSDictionary *node in nodes)
+            {
+                NSString *theName = [node objectForKey:s_xmlNameAttrName];
+                NSString *theValue = [node objectForKey:s_xmlTextAttrName];
+            
+//                NSLog(@"Name=%@ and Value=%@", theName, theValue);
+                if( [theName isEqualToString:@"entity_id"] )
+                    NSLog(@"Name=%@ and Value=%@", theName, theValue);
+                [location addParameter:theName :theValue];
+            }
+        }
+    }
+    return location;
+}
+
 @end

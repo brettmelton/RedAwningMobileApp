@@ -19,7 +19,19 @@
         [self setLongitude:[value floatValue]];
     else if( [name isEqualToString:@"entity_id" ])
         [self setEntityId:value];
-        
+    else if( [name isEqualToString:@"teaser" ])
+        [self setTeaser:value];
+    else if( [name isEqualToString:@"ss_my_contenttype_image" ])
+        [self setImageUrlWithModification:value];
+}
+
+- (void) setImageUrlWithModification:(NSString *)imageUrl
+{
+    int iTrimOffBeginning = [@"public:/" length];
+    NSMutableString *strImageUrl = [[NSMutableString alloc] initWithString:[imageUrl substringFromIndex:iTrimOffBeginning]];
+    [strImageUrl insertString:@"http://assets03.redawning.com/sites/default/files" atIndex:0];
+    [self setImageUrl:strImageUrl];
+
 }
 
 
