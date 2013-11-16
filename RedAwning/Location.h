@@ -11,6 +11,7 @@
 @interface Location : NSObject
 
 @property (strong, nonatomic) NSString *entityId;
+@property (strong, nonatomic) NSString *label;
 @property (strong, nonatomic) NSString *teaser;
 @property (strong, nonatomic) NSString *imageUrl;
 

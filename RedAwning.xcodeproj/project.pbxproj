@@ -14,6 +14,8 @@
 		2C66CF47181A2728003A80D3 /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66CF44181A2728003A80D3 /* Gear.png */; };
 		2C66CF48181A2728003A80D3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66CF45181A2728003A80D3 /* logo.png */; };
 		2C66CF4E181A2B86003A80D3 /* BrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66CF4D181A2B86003A80D3 /* BrowseViewController.m */; };
+		2CA09CFA1830877F00D67F00 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA09CF91830877F00D67F00 /* MapViewController.m */; };
+		2CA09CFD1830892800D67F00 /* MapPinAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA09CFC1830892800D67F00 /* MapPinAnnotation.m */; };
 		2CB643B1181B4D8C00224248 /* SearchModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB643B0181B4D8C00224248 /* SearchModelController.m */; };
 		2CB643B4181B54D900224248 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB643B3181B54D900224248 /* ModelController.m */; };
 		2CB643B7181B626C00224248 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB643B6181B626C00224248 /* XMLDictionary.m */; };
@@ -55,6 +57,10 @@
 		2C66CF45181A2728003A80D3 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../../Desktop/Red Awning/logo.png"; sourceTree = "<group>"; };
 		2C66CF4C181A2B86003A80D3 /* BrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseViewController.h; sourceTree = "<group>"; };
 		2C66CF4D181A2B86003A80D3 /* BrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseViewController.m; sourceTree = "<group>"; };
+		2CA09CF81830877F00D67F00 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		2CA09CF91830877F00D67F00 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		2CA09CFB1830892800D67F00 /* MapPinAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPinAnnotation.h; sourceTree = "<group>"; };
+		2CA09CFC1830892800D67F00 /* MapPinAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPinAnnotation.m; sourceTree = "<group>"; };
 		2CB643AF181B4D8C00224248 /* SearchModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModelController.h; sourceTree = "<group>"; };
 		2CB643B0181B4D8C00224248 /* SearchModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModelController.m; sourceTree = "<group>"; };
 		2CB643B2181B54D900224248 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
@@ -155,12 +161,16 @@
 				2CE91F8618162B9B0067C575 /* AppDelegate.h */,
 				2CE91F8718162B9B0067C575 /* AppDelegate.m */,
 				2CE91F8918162B9B0067C575 /* Main.storyboard */,
+				2CA09CF81830877F00D67F00 /* MapViewController.h */,
+				2CA09CF91830877F00D67F00 /* MapViewController.m */,
 				2C66CF4C181A2B86003A80D3 /* BrowseViewController.h */,
 				2C66CF4D181A2B86003A80D3 /* BrowseViewController.m */,
 				2C5341DE1817922E005D5681 /* SettingsViewController.h */,
 				2C5341DF1817922E005D5681 /* SettingsViewController.m */,
 				2CE91F8C18162B9B0067C575 /* ViewController.h */,
 				2CE91F8D18162B9B0067C575 /* ViewController.m */,
+				2CA09CFB1830892800D67F00 /* MapPinAnnotation.h */,
+				2CA09CFC1830892800D67F00 /* MapPinAnnotation.m */,
 				2CE91F8F18162B9B0067C575 /* Images.xcassets */,
 				2CE91F7E18162B9B0067C575 /* Supporting Files */,
 			);
@@ -301,11 +311,13 @@
 				2CE91F8818162B9B0067C575 /* AppDelegate.m in Sources */,
 				2CE91F8418162B9B0067C575 /* main.m in Sources */,
 				2C5341E01817922E005D5681 /* SettingsViewController.m in Sources */,
+				2CA09CFD1830892800D67F00 /* MapPinAnnotation.m in Sources */,
 				2CB643B7181B626C00224248 /* XMLDictionary.m in Sources */,
 				2C1AD2B6181DF3B900D5E892 /* Location.m in Sources */,
 				2CB643B4181B54D900224248 /* ModelController.m in Sources */,
 				2C02BCE418304B890058ED1B /* SearchViewController.m in Sources */,
 				2CB643B1181B4D8C00224248 /* SearchModelController.m in Sources */,
+				2CA09CFA1830877F00D67F00 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

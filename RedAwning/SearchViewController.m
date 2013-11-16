@@ -10,13 +10,18 @@
 
 #import "SearchViewController.h"
 #import "ViewController.h"
-#import "Location.h"
 
 @interface SearchViewController ()
-
++ (Location*)getCurrentLocation;
 @end
+static Location *s_currentLocation;
 
 @implementation SearchViewController
+
++ (Location*)getCurrentLocation
+{
+    return s_currentLocation;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,14 +36,16 @@
 {
 	NSLog(@"Left!");
 
-    if( _curIdxLocation < _arrLocations.count )
+    if( ( _curIdxLocation + 1 ) < _arrLocations.count )
     {
-        [self updateView];
+        [self incrementSearchView];
     }
     else
     {
         _curPageNumber++;
         [self performSearch :_curPageNumber];
+        if(_arrLocations.count > 0)
+            [self displaySearchView];
     }
 }
 
@@ -46,10 +53,23 @@
 {
 	NSLog(@"Right!");
     
+    if( _curIdxLocation == 0 && _curPageNumber == 0 )
+        return;
     
-// TODO - Need to implement
-    
-    
+    if( _curIdxLocation < _arrLocations.count && _curIdxLocation != 0 )
+    {
+        [self decrementSearchView];
+    }
+    else
+    {
+        _curPageNumber--;
+        [self performSearch :_curPageNumber];
+        if(_arrLocations.count > 0)
+        {
+            _curIdxLocation = _arrLocations.count;
+            [self decrementSearchView];
+        }
+    }
 }
 
 - (void)viewDidLoad
@@ -70,6 +90,8 @@
 	[self.view addGestureRecognizer:rightSwiper];
     
     [self performSearch :_curPageNumber];
+    if(_arrLocations.count > 0)
+        [self displaySearchView];
 }
 
 - (void) performSearch:(int) page
@@ -79,25 +101,44 @@
     
     if( _arrLocations.count > 0 )
     {
-        [self updateView];
+        _pageControl.numberOfPages = _arrLocations.count;
    }
     else
     {
-        self.entityId.text = @"No Results";
+        _pageControl.numberOfPages = 0;
+        self.label.text = @"No Results";
     }
 }
 
-- (void)updateView
+- (IBAction)onClick:(id)sender
+{
+    s_currentLocation = [_arrLocations objectAtIndex:_curIdxLocation];
+}
+
+- (void)incrementSearchView
+{
+    _curIdxLocation++;
+    [self displaySearchView];
+}
+- (void)decrementSearchView
+{
+    _curIdxLocation--;
+    [self displaySearchView];
+}
+
+- (void)displaySearchView
 {
     Location *location = [_arrLocations objectAtIndex:_curIdxLocation];
-    self.entityId.text = location.entityId;
+    self.entityId = location.entityId;
+    self.label.text = location.label;
+    self.teaser.text = location.teaser;
     
     NSURL *urlPhoto = [NSURL URLWithString:location.imageUrl];
     NSData *photoData = [NSData dataWithContentsOfURL:urlPhoto];
     UIImage *img = [[UIImage alloc] initWithData:photoData];
     [self.entityImg setImage:img];
     
-    _curIdxLocation++;
+    _pageControl.currentPage = _curIdxLocation;
 }
 
 - (void)didReceiveMemoryWarning

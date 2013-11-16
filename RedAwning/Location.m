@@ -19,6 +19,8 @@
         [self setLongitude:[value floatValue]];
     else if( [name isEqualToString:@"entity_id" ])
         [self setEntityId:value];
+    else if( [name isEqualToString:@"label" ])
+        [self setLabel:value];
     else if( [name isEqualToString:@"teaser" ])
         [self setTeaser:value];
     else if( [name isEqualToString:@"ss_my_contenttype_image" ])
