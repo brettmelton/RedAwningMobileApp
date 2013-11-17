@@ -18,6 +18,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *entityImg;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) IBOutlet UILabel *teaser;
+@property (strong, nonatomic) IBOutlet UIButton *moreButton;
+@property (strong, nonatomic) IBOutlet UIButton *mapButton;
 
 @property (strong, nonatomic) SearchModelController *model;
 @property (strong, nonatomic) NSString *strSearchText;

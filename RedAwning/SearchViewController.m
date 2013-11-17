@@ -34,7 +34,7 @@ static Location *s_currentLocation;
 
 - (IBAction)swipeLeft:(UIPanGestureRecognizer *)recognizer
 {
-	NSLog(@"Left!");
+	NSLog(@"Left page=%d index=%d", _curPageNumber, _curIdxLocation);
 
     if( ( _curIdxLocation + 1 ) < _arrLocations.count )
     {
@@ -51,7 +51,7 @@ static Location *s_currentLocation;
 
 - (void)swipeRight:(UIPanGestureRecognizer *)recognizer
 {
-	NSLog(@"Right!");
+	NSLog(@"Right page=%d index=%d", _curPageNumber, _curIdxLocation);
     
     if( _curIdxLocation == 0 && _curPageNumber == 0 )
         return;
@@ -102,11 +102,23 @@ static Location *s_currentLocation;
     if( _arrLocations.count > 0 )
     {
         _pageControl.numberOfPages = _arrLocations.count;
-   }
+        self.moreButton.hidden = FALSE;
+        self.mapButton.hidden = FALSE;
+    }
     else
     {
         _pageControl.numberOfPages = 0;
         self.label.text = @"No Results";
+        if( _curPageNumber == 0 )
+        {
+            self.teaser.text = @"Please try a different search";
+        }
+        else
+        {
+            self.teaser.text = @"Swipe back to return to prior results";
+        }
+        self.moreButton.hidden = TRUE;
+        self.mapButton.hidden = TRUE;
     }
 }
 
