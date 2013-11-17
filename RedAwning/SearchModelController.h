@@ -10,7 +10,7 @@
 #import "ModelController.h"
 
 
-static NSString *const s_urlSolrSearch       = @"http://solr-loadbalancer-566393618.us-west-1.elb.amazonaws.com:8080/solr/collection1/select?wt=xml&indent=true";
+static NSString *const s_urlSolrSearch       = @"http://solr-loadbalancer-566393618.us-west-1.elb.amazonaws.com:8080/solr/collection1/select?wt=xml&indent=true&sort=score%20desc";
 static NSString *const s_urlSolrSearchRowCnt = @"&rows=";
 static NSString *const s_urlSolrSearchStart  = @"&start=";
 static NSString *const s_urlSolrSearchQuery  = @"&q=";
