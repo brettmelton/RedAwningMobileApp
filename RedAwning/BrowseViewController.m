@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+//    UITableViewCell *theViewCellController = [[UITableViewCell alloc] init];
+//    theViewCellController.
+//    [self addChildViewController:theViewCellController];
 }
 
 - (void)didReceiveMemoryWarning

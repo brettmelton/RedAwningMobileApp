@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BrowseViewController : UIViewController
+@interface BrowseViewController : UITableViewController
+
+
+@property (strong, nonatomic) IBOutlet UITableViewCell *tableViewCell;
+
 
 @end
