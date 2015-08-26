@@ -26,11 +26,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    _model = [[SearchModelController alloc] init];
+
+    _arrLocations = [_model performSearch:@"" :1];
+
+
+    for( Location *location in _arrLocations )
+    {
+        
+        UITableViewCell *theViewCellController = [[UITableViewCell alloc] init];
+    }
     
-//    UITableViewCell *theViewCellController = [[UITableViewCell alloc] init];
-//    theViewCellController.
-//    [self addChildViewController:theViewCellController];
+    
+//    [[self tableView] insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationTop];
+    
+    
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

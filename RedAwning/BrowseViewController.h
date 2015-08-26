@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchModelController.h"
 
 @interface BrowseViewController : UITableViewController
 
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UITableViewCell *tableViewCell;
 
+
+@property (strong, nonatomic) SearchModelController *model;
+
+@property (strong, nonatomic) NSArray *arrLocations;
 
 @end
